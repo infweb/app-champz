@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E21508F816A5973D0067B6AB /* ACAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E21508F716A5973D0067B6AB /* ACAboutViewController.m */; };
 		E286F85316A58F6C004F7653 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E286F85216A58F6C004F7653 /* UIKit.framework */; };
 		E286F85516A58F6C004F7653 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E286F85416A58F6C004F7653 /* Foundation.framework */; };
 		E286F85716A58F6C004F7653 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E286F85616A58F6C004F7653 /* CoreGraphics.framework */; };
@@ -17,7 +18,7 @@
 		E286F86716A58F6C004F7653 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E286F86616A58F6C004F7653 /* Default@2x.png */; };
 		E286F86916A58F6C004F7653 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E286F86816A58F6C004F7653 /* Default-568h@2x.png */; };
 		E286F86C16A58F6C004F7653 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E286F86A16A58F6C004F7653 /* MainStoryboard.storyboard */; };
-		E286F86F16A58F6C004F7653 /* ACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E286F86E16A58F6C004F7653 /* ACViewController.m */; };
+		E286F86F16A58F6C004F7653 /* ACAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E286F86E16A58F6C004F7653 /* ACAppsViewController.m */; };
 		E286F87716A58F6D004F7653 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E286F87616A58F6D004F7653 /* SenTestingKit.framework */; };
 		E286F87816A58F6D004F7653 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E286F85216A58F6C004F7653 /* UIKit.framework */; };
 		E286F87916A58F6D004F7653 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E286F85416A58F6C004F7653 /* Foundation.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E21508F616A5973D0067B6AB /* ACAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAboutViewController.h; sourceTree = "<group>"; };
+		E21508F716A5973D0067B6AB /* ACAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAboutViewController.m; sourceTree = "<group>"; };
 		E286F84E16A58F6C004F7653 /* AppChampz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppChampz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E286F85216A58F6C004F7653 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E286F85416A58F6C004F7653 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,8 +53,8 @@
 		E286F86616A58F6C004F7653 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E286F86816A58F6C004F7653 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E286F86B16A58F6C004F7653 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		E286F86D16A58F6C004F7653 /* ACViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACViewController.h; sourceTree = "<group>"; };
-		E286F86E16A58F6C004F7653 /* ACViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACViewController.m; sourceTree = "<group>"; };
+		E286F86D16A58F6C004F7653 /* ACAppsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACAppsViewController.h; sourceTree = "<group>"; };
+		E286F86E16A58F6C004F7653 /* ACAppsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACAppsViewController.m; sourceTree = "<group>"; };
 		E286F87516A58F6D004F7653 /* AppChampzTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppChampzTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E286F87616A58F6D004F7653 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E286F87E16A58F6D004F7653 /* AppChampzTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppChampzTests-Info.plist"; sourceTree = "<group>"; };
@@ -120,8 +123,10 @@
 				E286F86116A58F6C004F7653 /* ACAppDelegate.h */,
 				E286F86216A58F6C004F7653 /* ACAppDelegate.m */,
 				E286F86A16A58F6C004F7653 /* MainStoryboard.storyboard */,
-				E286F86D16A58F6C004F7653 /* ACViewController.h */,
-				E286F86E16A58F6C004F7653 /* ACViewController.m */,
+				E21508F616A5973D0067B6AB /* ACAboutViewController.h */,
+				E21508F716A5973D0067B6AB /* ACAboutViewController.m */,
+				E286F86D16A58F6C004F7653 /* ACAppsViewController.h */,
+				E286F86E16A58F6C004F7653 /* ACAppsViewController.m */,
 				E286F85916A58F6C004F7653 /* Supporting Files */,
 			);
 			path = AppChampz;
@@ -273,7 +278,8 @@
 			files = (
 				E286F85F16A58F6C004F7653 /* main.m in Sources */,
 				E286F86316A58F6C004F7653 /* ACAppDelegate.m in Sources */,
-				E286F86F16A58F6C004F7653 /* ACViewController.m in Sources */,
+				E286F86F16A58F6C004F7653 /* ACAppsViewController.m in Sources */,
+				E21508F816A5973D0067B6AB /* ACAboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +385,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppChampz/AppChampz-Prefix.pch";
 				INFOPLIST_FILE = "AppChampz/AppChampz-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -390,6 +397,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppChampz/AppChampz-Prefix.pch";
 				INFOPLIST_FILE = "AppChampz/AppChampz-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -448,6 +456,7 @@
 				E286F88916A58F6D004F7653 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E286F88A16A58F6D004F7653 /* Build configuration list for PBXNativeTarget "AppChampzTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +465,7 @@
 				E286F88C16A58F6D004F7653 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
