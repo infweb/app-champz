@@ -14,7 +14,6 @@
 @end
 
 @implementation ACAboutViewController
-@synthesize delegate = _delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

@@ -12,15 +12,12 @@
 @end
 
 @implementation ACApp
-@synthesize name = _name, screenshotURL = _screenshotURL,
-            summary = _summary, description = _description;
-
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
     if (self = [super init]) {
-        self.name = [dictionary objectForKey:@"title"];
-        self.summary = [dictionary objectForKey:@"summary"];
-        self.description = [dictionary objectForKey:@"content"];
+        self.name = dictionary[@"title"];
+        self.summary = dictionary[@"summary"];
+        self.description = dictionary[@"content"];
     }
     return self;
 }

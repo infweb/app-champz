@@ -18,7 +18,6 @@
 @end
 
 @implementation ACAppsViewController
-@synthesize appCollection = _appCollection;
 
 - (void)viewDidLoad
 {

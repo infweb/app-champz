@@ -20,16 +20,9 @@
 
 
 @implementation ACAtomFeedParser
-@synthesize entries = _entries;
-@synthesize title = _title;
-@synthesize subtitle = _subtitle;
-@synthesize feedId = _feedId;
-@synthesize currentElement = _currentElement;
-@synthesize mutableEntries = _mutableEntries;
-
 - (NSArray *)entries
 {
-    return self.mutableEntries;
+    return [NSArray arrayWithArray:self.mutableEntries];
 }
 
 - (NSMutableArray *)mutableEntries {
@@ -89,7 +82,7 @@
     NSString *string = [characters stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if (string.length) {
         if (self.currentEntry) {
-            NSString *value = [self.currentEntry objectForKey:self.currentElement];
+            NSString *value = self.currentEntry[self.currentElement];
             if (!value) value = @"";
             value = [value stringByAppendingString:string];
             [self.currentEntry setObject:value forKey:self.currentElement];
