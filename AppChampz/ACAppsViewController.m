@@ -8,6 +8,9 @@
 
 #import "ACAppsViewController.h"
 #import "ACAboutViewController.h"
+#import "ACAppDetailViewController.h"
+#import "ACApi.h"
+#import "ACApp.h"
 
 @interface ACAppsViewController () <ACAboutViewControllerDelegate>
 @property (nonatomic, strong) NSArray* appCollection;
@@ -20,7 +23,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.appCollection = [NSArray arrayWithObjects:@"App 1", @"App 2", @"App 3", nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[ACApi api]
+     fetchAppsForPage:1 success:^(NSArray *apps) {
+         self.appCollection = apps;
+         [self.tableView reloadData];
+     }
+     failure:^(NSError *error) {
+         [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ErrorTitle", @"Error Message Title")
+                                     message:[error localizedDescription]
+                                    delegate:nil
+                           cancelButtonTitle:NSLocalizedString(@"Cancel", @"Cancel Button")
+                           otherButtonTitles:nil] show];
+     }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,7 +52,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"app"];
-    cell.textLabel.text = [self.appCollection objectAtIndex:indexPath.row];
+    ACApp *app = [self.appCollection objectAtIndex:indexPath.row];
+    cell.textLabel.text = app.name;
+    cell.detailTextLabel.text = app.summary;
     return cell;
 }
 
@@ -46,8 +67,10 @@
 {
     if ([segue.identifier isEqualToString:@"showApp"]) {
         NSInteger currentSelection = [self.tableView indexPathForSelectedRow].row;
-        [segue.destinationViewController navigationItem].title =
-        [self.appCollection objectAtIndex:currentSelection];
+        ACApp *app = [self.appCollection objectAtIndex:currentSelection];
+        ACAppDetailViewController *advc = segue.destinationViewController;
+        advc.navigationItem.title = app.name;
+        advc.appDescription = app.description;
     } else if ([segue.identifier isEqualToString:@"showAbout"]) {
         UINavigationController *nvc = segue.destinationViewController;
         ACAboutViewController* vc = [nvc.viewControllers objectAtIndex:0];

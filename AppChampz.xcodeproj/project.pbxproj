@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		E21508F816A5973D0067B6AB /* ACAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E21508F716A5973D0067B6AB /* ACAboutViewController.m */; };
+		E2586CDF16A5D64B0026B7A9 /* ACApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E2586CDE16A5D64B0026B7A9 /* ACApi.m */; };
+		E2586CF316A607B80026B7A9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2586CF216A607B80026B7A9 /* SystemConfiguration.framework */; };
+		E2586CF516A607BE0026B7A9 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2586CF416A607BE0026B7A9 /* MobileCoreServices.framework */; };
+		E2586CF816A60C2D0026B7A9 /* ACAtomFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2586CF716A60C2D0026B7A9 /* ACAtomFeedParser.m */; };
+		E2586CFB16A6C33B0026B7A9 /* ACApp.m in Sources */ = {isa = PBXBuildFile; fileRef = E2586CFA16A6C33A0026B7A9 /* ACApp.m */; };
+		E2586CFE16A6CB530026B7A9 /* ACAppDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2586CFD16A6CB530026B7A9 /* ACAppDetailViewController.m */; };
 		E286F85316A58F6C004F7653 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E286F85216A58F6C004F7653 /* UIKit.framework */; };
 		E286F85516A58F6C004F7653 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E286F85416A58F6C004F7653 /* Foundation.framework */; };
 		E286F85716A58F6C004F7653 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E286F85616A58F6C004F7653 /* CoreGraphics.framework */; };
@@ -24,6 +30,7 @@
 		E286F87916A58F6D004F7653 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E286F85416A58F6C004F7653 /* Foundation.framework */; };
 		E286F88116A58F6D004F7653 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E286F87F16A58F6D004F7653 /* InfoPlist.strings */; };
 		E286F88416A58F6D004F7653 /* AppChampzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E286F88316A58F6D004F7653 /* AppChampzTests.m */; };
+		ED968257DDD14C09B2A6D84E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 588D308C4FD3473CB1699E6A /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +44,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		588D308C4FD3473CB1699E6A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		74021839F525429FBEC727B8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		E21508F616A5973D0067B6AB /* ACAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAboutViewController.h; sourceTree = "<group>"; };
 		E21508F716A5973D0067B6AB /* ACAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAboutViewController.m; sourceTree = "<group>"; };
+		E2586CDD16A5D64B0026B7A9 /* ACApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACApi.h; sourceTree = "<group>"; };
+		E2586CDE16A5D64B0026B7A9 /* ACApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACApi.m; sourceTree = "<group>"; };
+		E2586CF216A607B80026B7A9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E2586CF416A607BE0026B7A9 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E2586CF616A60C2D0026B7A9 /* ACAtomFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAtomFeedParser.h; sourceTree = "<group>"; };
+		E2586CF716A60C2D0026B7A9 /* ACAtomFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAtomFeedParser.m; sourceTree = "<group>"; };
+		E2586CF916A6C33A0026B7A9 /* ACApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACApp.h; sourceTree = "<group>"; };
+		E2586CFA16A6C33A0026B7A9 /* ACApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACApp.m; sourceTree = "<group>"; };
+		E2586CFC16A6CB530026B7A9 /* ACAppDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAppDetailViewController.h; sourceTree = "<group>"; };
+		E2586CFD16A6CB530026B7A9 /* ACAppDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAppDetailViewController.m; sourceTree = "<group>"; };
 		E286F84E16A58F6C004F7653 /* AppChampz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppChampz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E286F85216A58F6C004F7653 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E286F85416A58F6C004F7653 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,9 +87,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2586CF516A607BE0026B7A9 /* MobileCoreServices.framework in Frameworks */,
+				E2586CF316A607B80026B7A9 /* SystemConfiguration.framework in Frameworks */,
 				E286F85316A58F6C004F7653 /* UIKit.framework in Frameworks */,
 				E286F85516A58F6C004F7653 /* Foundation.framework in Frameworks */,
 				E286F85716A58F6C004F7653 /* CoreGraphics.framework in Frameworks */,
+				ED968257DDD14C09B2A6D84E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +116,7 @@
 				E286F87C16A58F6D004F7653 /* AppChampzTests */,
 				E286F85116A58F6C004F7653 /* Frameworks */,
 				E286F84F16A58F6C004F7653 /* Products */,
+				74021839F525429FBEC727B8 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,10 +132,13 @@
 		E286F85116A58F6C004F7653 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E2586CF416A607BE0026B7A9 /* MobileCoreServices.framework */,
+				E2586CF216A607B80026B7A9 /* SystemConfiguration.framework */,
 				E286F85216A58F6C004F7653 /* UIKit.framework */,
 				E286F85416A58F6C004F7653 /* Foundation.framework */,
 				E286F85616A58F6C004F7653 /* CoreGraphics.framework */,
 				E286F87616A58F6D004F7653 /* SenTestingKit.framework */,
+				588D308C4FD3473CB1699E6A /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -128,6 +154,14 @@
 				E286F86D16A58F6C004F7653 /* ACAppsViewController.h */,
 				E286F86E16A58F6C004F7653 /* ACAppsViewController.m */,
 				E286F85916A58F6C004F7653 /* Supporting Files */,
+				E2586CDD16A5D64B0026B7A9 /* ACApi.h */,
+				E2586CDE16A5D64B0026B7A9 /* ACApi.m */,
+				E2586CF616A60C2D0026B7A9 /* ACAtomFeedParser.h */,
+				E2586CF716A60C2D0026B7A9 /* ACAtomFeedParser.m */,
+				E2586CF916A6C33A0026B7A9 /* ACApp.h */,
+				E2586CFA16A6C33A0026B7A9 /* ACApp.m */,
+				E2586CFC16A6CB530026B7A9 /* ACAppDetailViewController.h */,
+				E2586CFD16A6CB530026B7A9 /* ACAppDetailViewController.m */,
 			);
 			path = AppChampz;
 			sourceTree = "<group>";
@@ -175,6 +209,7 @@
 				E286F84A16A58F6C004F7653 /* Sources */,
 				E286F84B16A58F6C004F7653 /* Frameworks */,
 				E286F84C16A58F6C004F7653 /* Resources */,
+				10CE1D9EDEF04F9B87EEBD3A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +291,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		10CE1D9EDEF04F9B87EEBD3A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 		E286F87316A58F6D004F7653 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,6 +329,10 @@
 				E286F86316A58F6C004F7653 /* ACAppDelegate.m in Sources */,
 				E286F86F16A58F6C004F7653 /* ACAppsViewController.m in Sources */,
 				E21508F816A5973D0067B6AB /* ACAboutViewController.m in Sources */,
+				E2586CDF16A5D64B0026B7A9 /* ACApi.m in Sources */,
+				E2586CF816A60C2D0026B7A9 /* ACAtomFeedParser.m in Sources */,
+				E2586CFB16A6C33B0026B7A9 /* ACApp.m in Sources */,
+				E2586CFE16A6CB530026B7A9 /* ACAppDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +434,7 @@
 		};
 		E286F88816A58F6D004F7653 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74021839F525429FBEC727B8 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppChampz/AppChampz-Prefix.pch";
@@ -393,6 +447,7 @@
 		};
 		E286F88916A58F6D004F7653 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74021839F525429FBEC727B8 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppChampz/AppChampz-Prefix.pch";
