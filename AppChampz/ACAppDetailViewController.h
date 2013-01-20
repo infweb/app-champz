@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
-@interface ACAppDetailViewController : UIViewController
+@interface ACAppDetailViewController : GAITrackedViewController
 @property (nonatomic, strong) NSString *appDescription;
 @end

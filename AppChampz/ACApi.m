@@ -57,7 +57,7 @@
                  success:(void (^)(NSArray *))successBlock
                  failure:(void (^)(NSError *))failureBlock;
 {
-    NSString *path = @"/feed/atom/";
+    NSString *path = [NSString stringWithFormat:@"/feed/atom/?paged=%d", page];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [self
      getPath:path parameters:nil
@@ -75,7 +75,9 @@
          [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
      }
      failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-         if (failureBlock) {
+         if (operation.response.statusCode == 404 && successBlock) {
+             successBlock([NSArray array]);
+         } else if (failureBlock) {
              failureBlock(error);
          }
          [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;

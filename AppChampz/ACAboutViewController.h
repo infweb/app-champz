@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
 @class ACAboutViewController;
 
@@ -14,6 +15,6 @@
 - (void)aboutViewControllerDidClose:(ACAboutViewController *)aboutViewController;
 @end
 
-@interface ACAboutViewController : UIViewController
+@interface ACAboutViewController : GAITrackedViewController
 @property (nonatomic, weak) id<ACAboutViewControllerDelegate> delegate;
 @end

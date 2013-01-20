@@ -1,14 +1,17 @@
 
 PODS:
 - AFNetworking (1.1.0)
-- JSONKit (1.5pre)
+- GoogleAnalytics-iOS-SDK (2.0beta4)
+- SVPullToRefresh (0.4)
 
 DEPENDENCIES:
-- AFNetworking
-- JSONKit
+- AFNetworking (= 1.1.0)
+- GoogleAnalytics-iOS-SDK (= 2.0beta4)
+- SVPullToRefresh (= 0.4)
 
 SPEC CHECKSUMS:
   AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
-  JSONKit: 3d4708953ea7ae399a49777372d8b060a43ddd27
+  GoogleAnalytics-iOS-SDK: faed6c1fafabd3363fe7fe39779381274ac771b9
+  SVPullToRefresh: 479bcbbf42c83366f49aab231ed6e94dad928fef
 
 COCOAPODS: 0.16.1

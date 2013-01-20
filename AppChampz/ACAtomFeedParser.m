@@ -49,7 +49,6 @@
  qualifiedName:(NSString *)qName
     attributes:(NSDictionary *)attributeDict
 {
-//    NSLog(@"%@%@", self.currentEntry ? @"\t" : @"", elementName);
     self.currentElement = elementName;
     
     if (self.currentEntry) {

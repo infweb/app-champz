@@ -30,6 +30,8 @@
 		E286F87916A58F6D004F7653 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E286F85416A58F6C004F7653 /* Foundation.framework */; };
 		E286F88116A58F6D004F7653 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E286F87F16A58F6D004F7653 /* InfoPlist.strings */; };
 		E286F88416A58F6D004F7653 /* AppChampzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E286F88316A58F6D004F7653 /* AppChampzTests.m */; };
+		E2EA9FE816A9A51100E2A160 /* ACLoadingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EA9FE716A9A51100E2A160 /* ACLoadingCell.m */; };
+		E2EA9FF316AA01BF00E2A160 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2EA9FF516AA01BF00E2A160 /* Localizable.strings */; };
 		ED968257DDD14C09B2A6D84E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 588D308C4FD3473CB1699E6A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +65,6 @@
 		E286F85416A58F6C004F7653 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E286F85616A58F6C004F7653 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E286F85A16A58F6C004F7653 /* AppChampz-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppChampz-Info.plist"; sourceTree = "<group>"; };
-		E286F85C16A58F6C004F7653 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E286F85E16A58F6C004F7653 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E286F86016A58F6C004F7653 /* AppChampz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppChampz-Prefix.pch"; sourceTree = "<group>"; };
 		E286F86116A58F6C004F7653 /* ACAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACAppDelegate.h; sourceTree = "<group>"; };
@@ -71,7 +72,6 @@
 		E286F86416A58F6C004F7653 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		E286F86616A58F6C004F7653 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E286F86816A58F6C004F7653 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		E286F86B16A58F6C004F7653 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		E286F86D16A58F6C004F7653 /* ACAppsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACAppsViewController.h; sourceTree = "<group>"; };
 		E286F86E16A58F6C004F7653 /* ACAppsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACAppsViewController.m; sourceTree = "<group>"; };
 		E286F87516A58F6D004F7653 /* AppChampzTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppChampzTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +80,15 @@
 		E286F88016A58F6D004F7653 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E286F88216A58F6D004F7653 /* AppChampzTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppChampzTests.h; sourceTree = "<group>"; };
 		E286F88316A58F6D004F7653 /* AppChampzTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppChampzTests.m; sourceTree = "<group>"; };
+		E2EA9FE616A9A51100E2A160 /* ACLoadingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACLoadingCell.h; sourceTree = "<group>"; };
+		E2EA9FE716A9A51100E2A160 /* ACLoadingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACLoadingCell.m; sourceTree = "<group>"; };
+		E2EA9FF416AA01BF00E2A160 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E2EA9FF616AA025500E2A160 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
+		E2EA9FF716AA025500E2A160 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		E2EA9FF816AA025500E2A160 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E2EA9FF916AA025500E2A160 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		E2EA9FFA16AA06B100E2A160 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E2EDF0DB16AC47690074E64D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,13 +155,11 @@
 		E286F85816A58F6C004F7653 /* AppChampz */ = {
 			isa = PBXGroup;
 			children = (
+				E2EA9FE516A9A4E400E2A160 /* Custom Views */,
+				E2EA9FE316A9A1D100E2A160 /* ViewControllers */,
 				E286F86116A58F6C004F7653 /* ACAppDelegate.h */,
 				E286F86216A58F6C004F7653 /* ACAppDelegate.m */,
 				E286F86A16A58F6C004F7653 /* MainStoryboard.storyboard */,
-				E21508F616A5973D0067B6AB /* ACAboutViewController.h */,
-				E21508F716A5973D0067B6AB /* ACAboutViewController.m */,
-				E286F86D16A58F6C004F7653 /* ACAppsViewController.h */,
-				E286F86E16A58F6C004F7653 /* ACAppsViewController.m */,
 				E286F85916A58F6C004F7653 /* Supporting Files */,
 				E2586CDD16A5D64B0026B7A9 /* ACApi.h */,
 				E2586CDE16A5D64B0026B7A9 /* ACApi.m */,
@@ -160,8 +167,6 @@
 				E2586CF716A60C2D0026B7A9 /* ACAtomFeedParser.m */,
 				E2586CF916A6C33A0026B7A9 /* ACApp.h */,
 				E2586CFA16A6C33A0026B7A9 /* ACApp.m */,
-				E2586CFC16A6CB530026B7A9 /* ACAppDetailViewController.h */,
-				E2586CFD16A6CB530026B7A9 /* ACAppDetailViewController.m */,
 			);
 			path = AppChampz;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				E286F85A16A58F6C004F7653 /* AppChampz-Info.plist */,
+				E2EA9FF516AA01BF00E2A160 /* Localizable.strings */,
 				E286F85B16A58F6C004F7653 /* InfoPlist.strings */,
 				E286F85E16A58F6C004F7653 /* main.m */,
 				E286F86016A58F6C004F7653 /* AppChampz-Prefix.pch */,
@@ -197,6 +203,28 @@
 				E286F87F16A58F6D004F7653 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2EA9FE316A9A1D100E2A160 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E21508F616A5973D0067B6AB /* ACAboutViewController.h */,
+				E21508F716A5973D0067B6AB /* ACAboutViewController.m */,
+				E2586CFC16A6CB530026B7A9 /* ACAppDetailViewController.h */,
+				E2586CFD16A6CB530026B7A9 /* ACAppDetailViewController.m */,
+				E286F86D16A58F6C004F7653 /* ACAppsViewController.h */,
+				E286F86E16A58F6C004F7653 /* ACAppsViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E2EA9FE516A9A4E400E2A160 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				E2EA9FE616A9A51100E2A160 /* ACLoadingCell.h */,
+				E2EA9FE716A9A51100E2A160 /* ACLoadingCell.m */,
+			);
+			name = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +283,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"pt-BR",
+				Base,
 			);
 			mainGroup = E286F84316A58F6C004F7653;
 			productRefGroup = E286F84F16A58F6C004F7653 /* Products */;
@@ -277,6 +307,7 @@
 				E286F86716A58F6C004F7653 /* Default@2x.png in Resources */,
 				E286F86916A58F6C004F7653 /* Default-568h@2x.png in Resources */,
 				E286F86C16A58F6C004F7653 /* MainStoryboard.storyboard in Resources */,
+				E2EA9FF316AA01BF00E2A160 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +364,7 @@
 				E2586CF816A60C2D0026B7A9 /* ACAtomFeedParser.m in Sources */,
 				E2586CFB16A6C33B0026B7A9 /* ACApp.m in Sources */,
 				E2586CFE16A6CB530026B7A9 /* ACAppDetailViewController.m in Sources */,
+				E2EA9FE816A9A51100E2A160 /* ACLoadingCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +390,8 @@
 		E286F85B16A58F6C004F7653 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E286F85C16A58F6C004F7653 /* en */,
+				E2EA9FF716AA025500E2A160 /* pt-BR */,
+				E2EA9FFA16AA06B100E2A160 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -366,7 +399,8 @@
 		E286F86A16A58F6C004F7653 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E286F86B16A58F6C004F7653 /* en */,
+				E2EA9FF616AA025500E2A160 /* pt-BR */,
+				E2EDF0DB16AC47690074E64D /* en */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -375,8 +409,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				E286F88016A58F6D004F7653 /* en */,
+				E2EA9FF916AA025500E2A160 /* pt-BR */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E2EA9FF516AA01BF00E2A160 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2EA9FF416AA01BF00E2A160 /* en */,
+				E2EA9FF816AA025500E2A160 /* pt-BR */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

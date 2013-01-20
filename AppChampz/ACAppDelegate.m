@@ -7,13 +7,21 @@
 //
 
 #import "ACAppDelegate.h"
+#import "GAI.h"
+
+#define kGoogleAnalyticsTrackingID @"UA-31056501-3"
 
 @implementation ACAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    [GAI sharedInstance].dispatchInterval = 20;
+    [GAI sharedInstance].debug = YES;
     
+    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:kGoogleAnalyticsTrackingID];
+    NSLog(@"Registered tracker %@", tracker);
     return YES;
 }
 							
