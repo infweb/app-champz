@@ -119,11 +119,6 @@
                                 <segue destination="bJi-63-I05" kind="modal" identifier="showAbout" id="maO-4X-hc9"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="kV7-nX-aL0">
-                            <connections>
-                                <action selector="refreshPressed:" destination="cct-jB-CGi" id="Lqt-X4-66o"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DG1-44-z2f" userLabel="First Responder" sceneMemberID="firstResponder"/>

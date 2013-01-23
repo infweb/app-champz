@@ -14,6 +14,11 @@
 		E2586CF816A60C2D0026B7A9 /* ACAtomFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2586CF716A60C2D0026B7A9 /* ACAtomFeedParser.m */; };
 		E2586CFB16A6C33B0026B7A9 /* ACApp.m in Sources */ = {isa = PBXBuildFile; fileRef = E2586CFA16A6C33A0026B7A9 /* ACApp.m */; };
 		E2586CFE16A6CB530026B7A9 /* ACAppDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2586CFD16A6CB530026B7A9 /* ACAppDetailViewController.m */; };
+		E27D585016AF38CA00665FF5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E27D584F16AF38CA00665FF5 /* Default-568h@2x.png */; };
+		E27D585216AF3A4900665FF5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E27D585116AF3A4900665FF5 /* Default@2x.png */; };
+		E27D585416AF3C2E00665FF5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E27D585316AF3C2E00665FF5 /* Default.png */; };
+		E27E2BCF16AF2CB600DA94A9 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E27E2BCE16AF2CB600DA94A9 /* Icon.png */; };
+		E27E2BD116AF2CBD00DA94A9 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E27E2BD016AF2CBD00DA94A9 /* icon@2x.png */; };
 		E286F85316A58F6C004F7653 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E286F85216A58F6C004F7653 /* UIKit.framework */; };
 		E286F85516A58F6C004F7653 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E286F85416A58F6C004F7653 /* Foundation.framework */; };
 		E286F85716A58F6C004F7653 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E286F85616A58F6C004F7653 /* CoreGraphics.framework */; };
@@ -30,7 +35,6 @@
 		E286F87916A58F6D004F7653 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E286F85416A58F6C004F7653 /* Foundation.framework */; };
 		E286F88116A58F6D004F7653 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E286F87F16A58F6D004F7653 /* InfoPlist.strings */; };
 		E286F88416A58F6D004F7653 /* AppChampzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E286F88316A58F6D004F7653 /* AppChampzTests.m */; };
-		E2EA9FE816A9A51100E2A160 /* ACLoadingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EA9FE716A9A51100E2A160 /* ACLoadingCell.m */; };
 		E2EA9FF316AA01BF00E2A160 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2EA9FF516AA01BF00E2A160 /* Localizable.strings */; };
 		ED968257DDD14C09B2A6D84E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 588D308C4FD3473CB1699E6A /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -60,6 +64,13 @@
 		E2586CFA16A6C33A0026B7A9 /* ACApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACApp.m; sourceTree = "<group>"; };
 		E2586CFC16A6CB530026B7A9 /* ACAppDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAppDetailViewController.h; sourceTree = "<group>"; };
 		E2586CFD16A6CB530026B7A9 /* ACAppDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAppDetailViewController.m; sourceTree = "<group>"; };
+		E27D584F16AF38CA00665FF5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E27D585116AF3A4900665FF5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		E27D585316AF3C2E00665FF5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		E27E2BC616AF1F2200DA94A9 /* AppChampz copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "AppChampz copy-Info.plist"; path = "/Users/rodolfo/code/cocoa/AppChampz/AppChampz copy-Info.plist"; sourceTree = "<absolute>"; };
+		E27E2BCA16AF1F7400DA94A9 /* AppChampz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AppChampz.entitlements; sourceTree = "<group>"; };
+		E27E2BCE16AF2CB600DA94A9 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		E27E2BD016AF2CBD00DA94A9 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		E286F84E16A58F6C004F7653 /* AppChampz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppChampz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E286F85216A58F6C004F7653 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E286F85416A58F6C004F7653 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,8 +91,6 @@
 		E286F88016A58F6D004F7653 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E286F88216A58F6D004F7653 /* AppChampzTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppChampzTests.h; sourceTree = "<group>"; };
 		E286F88316A58F6D004F7653 /* AppChampzTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppChampzTests.m; sourceTree = "<group>"; };
-		E2EA9FE616A9A51100E2A160 /* ACLoadingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACLoadingCell.h; sourceTree = "<group>"; };
-		E2EA9FE716A9A51100E2A160 /* ACLoadingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACLoadingCell.m; sourceTree = "<group>"; };
 		E2EA9FF416AA01BF00E2A160 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E2EA9FF616AA025500E2A160 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
 		E2EA9FF716AA025500E2A160 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -118,6 +127,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E27D585516AF3C4100665FF5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E27D585316AF3C2E00665FF5 /* Default.png */,
+				E27D585116AF3A4900665FF5 /* Default@2x.png */,
+				E27D584F16AF38CA00665FF5 /* Default-568h@2x.png */,
+				E27E2BD016AF2CBD00DA94A9 /* icon@2x.png */,
+				E27E2BCE16AF2CB600DA94A9 /* Icon.png */,
+			);
+			name = Resources;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		E286F84316A58F6C004F7653 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +148,7 @@
 				E286F85116A58F6C004F7653 /* Frameworks */,
 				E286F84F16A58F6C004F7653 /* Products */,
 				74021839F525429FBEC727B8 /* Pods.xcconfig */,
+				E27E2BC616AF1F2200DA94A9 /* AppChampz copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,7 +178,7 @@
 		E286F85816A58F6C004F7653 /* AppChampz */ = {
 			isa = PBXGroup;
 			children = (
-				E2EA9FE516A9A4E400E2A160 /* Custom Views */,
+				E27D585516AF3C4100665FF5 /* Resources */,
 				E2EA9FE316A9A1D100E2A160 /* ViewControllers */,
 				E286F86116A58F6C004F7653 /* ACAppDelegate.h */,
 				E286F86216A58F6C004F7653 /* ACAppDelegate.m */,
@@ -174,6 +197,7 @@
 		E286F85916A58F6C004F7653 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E27E2BCA16AF1F7400DA94A9 /* AppChampz.entitlements */,
 				E286F85A16A58F6C004F7653 /* AppChampz-Info.plist */,
 				E2EA9FF516AA01BF00E2A160 /* Localizable.strings */,
 				E286F85B16A58F6C004F7653 /* InfoPlist.strings */,
@@ -216,15 +240,6 @@
 				E286F86E16A58F6C004F7653 /* ACAppsViewController.m */,
 			);
 			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		E2EA9FE516A9A4E400E2A160 /* Custom Views */ = {
-			isa = PBXGroup;
-			children = (
-				E2EA9FE616A9A51100E2A160 /* ACLoadingCell.h */,
-				E2EA9FE716A9A51100E2A160 /* ACLoadingCell.m */,
-			);
-			name = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +323,11 @@
 				E286F86916A58F6C004F7653 /* Default-568h@2x.png in Resources */,
 				E286F86C16A58F6C004F7653 /* MainStoryboard.storyboard in Resources */,
 				E2EA9FF316AA01BF00E2A160 /* Localizable.strings in Resources */,
+				E27E2BCF16AF2CB600DA94A9 /* Icon.png in Resources */,
+				E27E2BD116AF2CBD00DA94A9 /* icon@2x.png in Resources */,
+				E27D585016AF38CA00665FF5 /* Default-568h@2x.png in Resources */,
+				E27D585216AF3A4900665FF5 /* Default@2x.png in Resources */,
+				E27D585416AF3C2E00665FF5 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +384,6 @@
 				E2586CF816A60C2D0026B7A9 /* ACAtomFeedParser.m in Sources */,
 				E2586CFB16A6C33B0026B7A9 /* ACApp.m in Sources */,
 				E2586CFE16A6CB530026B7A9 /* ACAppDetailViewController.m in Sources */,
-				E2EA9FE816A9A51100E2A160 /* ACLoadingCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +445,59 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E27E2BC716AF1F3C00DA94A9 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		E27E2BC816AF1F3C00DA94A9 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74021839F525429FBEC727B8 /* Pods.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AppChampz/AppChampz.entitlements;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AppChampz/AppChampz-Prefix.pch";
+				INFOPLIST_FILE = "AppChampz/AppChampz-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Distribution;
+		};
+		E27E2BC916AF1F3C00DA94A9 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AppChampz.app/AppChampz";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AppChampz/AppChampz-Prefix.pch";
+				INFOPLIST_FILE = "AppChampzTests/AppChampzTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Distribution;
+		};
 		E286F88516A58F6D004F7653 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -448,7 +520,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -469,7 +541,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -480,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74021839F525429FBEC727B8 /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AppChampz/AppChampz.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppChampz/AppChampz-Prefix.pch";
 				INFOPLIST_FILE = "AppChampz/AppChampz-Info.plist";
@@ -493,6 +566,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74021839F525429FBEC727B8 /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AppChampz/AppChampz.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppChampz/AppChampz-Prefix.pch";
 				INFOPLIST_FILE = "AppChampz/AppChampz-Info.plist";
@@ -544,6 +618,7 @@
 			buildConfigurations = (
 				E286F88516A58F6D004F7653 /* Debug */,
 				E286F88616A58F6D004F7653 /* Release */,
+				E27E2BC716AF1F3C00DA94A9 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -553,6 +628,7 @@
 			buildConfigurations = (
 				E286F88816A58F6D004F7653 /* Debug */,
 				E286F88916A58F6D004F7653 /* Release */,
+				E27E2BC816AF1F3C00DA94A9 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -562,6 +638,7 @@
 			buildConfigurations = (
 				E286F88B16A58F6D004F7653 /* Debug */,
 				E286F88C16A58F6D004F7653 /* Release */,
+				E27E2BC916AF1F3C00DA94A9 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

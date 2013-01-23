@@ -12,16 +12,14 @@
 #import "ACApi.h"
 #import "ACApp.h"
 #import "GAI.h"
-#import "ACLoadingCell.h"
 #import "UIScrollView+SVPullToRefresh.h"
 #import "UIScrollView+SVInfiniteScrolling.h"
 
 #define kLoadingTag 4688
 
-@interface ACAppsViewController () <ACAboutViewControllerDelegate, ACLoadingCellDelegate> {
+@interface ACAppsViewController () <ACAboutViewControllerDelegate> {
     BOOL _isLoading;
 }
-- (IBAction)refreshPressed:(id)sender;
 
 @property (nonatomic, strong) NSMutableArray* appCollection;
 @property (nonatomic) NSInteger currentPage;
@@ -32,6 +30,18 @@
 - (void)fetchAppsForPagePage:(NSInteger)page clearCurrent:(BOOL)clear
 {
     [self fetchAppsForPagePage:page clearCurrent:clear callback:nil];
+}
+
+- (void)refreshRequested
+{
+    self.currentPage = 1;
+    [self fetchAppsForPagePage:1 clearCurrent:YES callback:^{
+        if ([self respondsToSelector:@selector(refreshControl)]) {
+            [self.refreshControl endRefreshing];
+        } else {
+            [self.tableView.pullToRefreshView stopAnimating];
+        }
+    }];
 }
 
 - (void)fetchAppsForPagePage:(NSInteger)page clearCurrent:(BOOL)clear callback:(void (^)(void))callback
@@ -66,12 +76,16 @@
     self.appCollection = [NSMutableArray array];
 
     __block ACAppsViewController *this = self;
-    [self.tableView addPullToRefreshWithActionHandler:^{
-        this.currentPage = 1;
-        [this fetchAppsForPagePage:1 clearCurrent:YES callback:^{
-            [this.tableView.pullToRefreshView stopAnimating];
+    
+    if ([self respondsToSelector:@selector(refreshControl)]) {
+        self.refreshControl = [[UIRefreshControl alloc] init];
+        [self.refreshControl addTarget:self action:@selector(refreshRequested)
+                      forControlEvents:UIControlEventValueChanged];
+    } else {
+        [self.tableView addPullToRefreshWithActionHandler:^{
+            [this refreshRequested];
         }];
-    }];
+    }
     
     [self.tableView addInfiniteScrollingWithActionHandler:^{
         [this fetchAppsForPagePage:++this.currentPage clearCurrent:NO callback:^{
@@ -103,46 +117,15 @@
     return cell;
 }
 
-- (UITableViewCell *)loadingCell
-{
-    ACLoadingCell *cell = [[ACLoadingCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"loading"];
-    cell.tag = kLoadingTag;
-    cell.delegate = self;
-    return cell;
-}
-
-- (void)loadingCellDidRequestLoadMore:(ACLoadingCell *)cell
-{
-    [cell setActivityIndicatorVisible:YES animated:YES];
-    [self fetchAppsForPagePage:++self.currentPage clearCurrent:NO callback:^{
-        [cell setActivityIndicatorVisible:NO animated:YES];
-    }];
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // if (indexPath.row < self.appCollection.count)
     return [self tableView:tableView cellForAppAtIndexPath:indexPath];
-    // return [self loadingCell];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // return self.currentPage ? self.appCollection.count + 1 : 1;
     return self.appCollection.count;
-}
-
-- (void)tableView:(UITableView *)tableView
-  willDisplayCell:(UITableViewCell *)cell
-forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (cell.tag == kLoadingTag) {
-        ACLoadingCell *loadingCell = (ACLoadingCell *)cell;
-        [loadingCell setActivityIndicatorVisible:YES animated:YES];
-        [self fetchAppsForPagePage:++self.currentPage clearCurrent:NO callback:^{
-            [loadingCell setActivityIndicatorVisible:NO animated:YES];
-        }];
-    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -163,9 +146,5 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 - (void)aboutViewControllerDidClose:(ACAboutViewController *)aboutViewController
 {
     [self dismissModalViewControllerAnimated:YES];
-}
-- (IBAction)refreshPressed:(id)sender {
-    self.currentPage = 0;
-    [self fetchAppsForPagePage:++self.currentPage clearCurrent:YES];
 }
 @end

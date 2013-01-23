@@ -3,15 +3,18 @@ PODS:
 - AFNetworking (1.1.0)
 - GoogleAnalytics-iOS-SDK (2.0beta4)
 - SVPullToRefresh (0.4)
+- TestFlightSDK (1.2)
 
 DEPENDENCIES:
 - AFNetworking (= 1.1.0)
 - GoogleAnalytics-iOS-SDK (= 2.0beta4)
 - SVPullToRefresh (= 0.4)
+- TestFlightSDK (= 1.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
   GoogleAnalytics-iOS-SDK: faed6c1fafabd3363fe7fe39779381274ac771b9
   SVPullToRefresh: 479bcbbf42c83366f49aab231ed6e94dad928fef
+  TestFlightSDK: 29e194fb148e4861f92e4c1195b9697e1f3ad19a
 
 COCOAPODS: 0.16.1
