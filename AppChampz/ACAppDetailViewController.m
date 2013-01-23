@@ -125,15 +125,6 @@
     [super viewDidUnload];
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"showAbout"]) {
-        UINavigationController *nvc = segue.destinationViewController;
-        ACAboutViewController *avc = nvc.viewControllers[0];
-        avc.delegate = self;
-    }
-}
-
 - (void)pullLeftPressed:(id)sender
 {
     [self.delegate detailViewControllerPressedPullLeft:self];

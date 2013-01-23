@@ -76,6 +76,9 @@
     UIImage *bg = [[UIImage imageNamed:@"navbar-bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(1, 1, 1, 1)];
     [self.navigationController.navigationBar setBackgroundImage:bg forBarMetrics:UIBarMetricsDefault];
     
+    UIImage *tableBg = [[UIImage imageNamed:@"dark-bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(1, 1, 1, 1)];
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:tableBg];
+    
     
     self.appCollection = [NSMutableArray array];
 

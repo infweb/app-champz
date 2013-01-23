@@ -73,7 +73,7 @@
 #pragma mark ACAppsViewControllerDelegate
 - (void)appsViewController:(ACAppsViewController *)viewController didSelectApp:(ACApp *)app
 {
-    ACAppDetailViewController *vc = ((UINavigationController *)self.rootViewController).viewControllers[0];
+    ACAppDetailViewController *vc = [(UINavigationController *)self.rootViewController viewControllers][0];
     [vc loadDataFromApp:app];
     [self showRootController:YES];
 }

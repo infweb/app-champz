@@ -46,14 +46,14 @@
         <!--About View Controller - Sobre-->
         <scene sceneID="GPM-cP-wGd">
             <objects>
-                <viewController id="RCt-fQ-r3W" customClass="ACAboutViewController" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="RCt-fQ-r3W" customClass="ACAboutViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pMi-bx-uD6">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="about-bg.png" id="OFV-As-ftv">
                                 <rect key="frame" x="0.0" y="121" width="320" height="295"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="App Champz 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aVb-b7-TG4">
                                 <rect key="frame" x="20" y="9" width="280" height="21"/>
@@ -64,7 +64,7 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" id="Ysy-YD-qtq">
                                 <rect key="frame" x="20" y="28" width="280" height="124"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Nós indicamos aplicativos que podem ser úteis ou no mínimo divertidos para você. Não temos preferência por categorias, apenas testamos como usuários e compartilhamos os que achamos interessantes.</string>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
@@ -72,7 +72,7 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aoG-Jb-tFW">
                                 <rect key="frame" x="20" y="359" width="118" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                 <state key="normal" title="     INFWEB.NET" backgroundImage="infweb-goto-btn.png">
                                     <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -87,7 +87,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mja-NB-KCQ">
                                 <rect key="frame" x="182" y="359" width="118" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                 <state key="normal" title="  COMPARTILHAR" backgroundImage="share-btn-bg.png">
                                     <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -97,13 +97,13 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icons-about.png" id="xFZ-UQ-Om7">
-                                <rect key="frame" x="45" y="262" width="231" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" image="icons-about.png" id="xFZ-UQ-Om7">
+                                <rect key="frame" x="20" y="262" width="280" height="75"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="infweb-about-logo.png" id="Wlz-S2-bDQ">
-                                <rect key="frame" x="71" y="170" width="178" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" image="infweb-about-logo.png" id="Wlz-S2-bDQ">
+                                <rect key="frame" x="20" y="170" width="280" height="77"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -116,6 +116,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="aboutDescriptionLabel" destination="Ysy-YD-qtq" id="frs-q9-EcM"/>
+                        <outlet property="aboutTitleLabel" destination="aVb-b7-TG4" id="q9h-MQ-EvH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HU4-3X-h1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,28 +144,23 @@
         <scene sceneID="kaa-PG-xAf">
             <objects>
                 <tableViewController storyboardIdentifier="" title="App Champs" id="cct-jB-CGi" customClass="ACAppsViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="AF2-L6-I8j">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="39" sectionHeaderHeight="22" sectionFooterHeight="22" id="AF2-L6-I8j">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="app" textLabel="85E-bH-zKj" detailTextLabel="S5X-hT-pMr" style="IBUITableViewCellStyleSubtitle" id="2Dr-V7-smF">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="app" textLabel="85E-bH-zKj" rowHeight="39" style="IBUITableViewCellStyleDefault" id="2Dr-V7-smF">
+                                <rect key="frame" x="0.0" y="22" width="320" height="39"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="38"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="85E-bH-zKj">
-                                            <rect key="frame" x="10" y="2" width="55" height="21"/>
-                                            <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="18"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S5X-hT-pMr">
-                                            <rect key="frame" x="10" y="23" width="36" height="18"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="38"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
@@ -183,7 +182,7 @@
         <!--Navigation Controller-->
         <scene sceneID="iPn-m5-n8y">
             <objects>
-                <navigationController storyboardIdentifier="aboutViewController" id="bJi-63-I05" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="aboutViewController" modalTransitionStyle="flipHorizontal" id="bJi-63-I05" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KpU-T1-WEz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -250,6 +249,8 @@
             <relationships>
                 <relationship kind="action" name="closePressed:"/>
                 <relationship kind="action" name="gotoWebsite:"/>
+                <relationship kind="outlet" name="aboutDescriptionLabel" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="aboutTitleLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="ACAppDetailViewController" superclassName="GAITrackedViewController">

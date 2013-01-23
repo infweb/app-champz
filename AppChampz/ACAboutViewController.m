@@ -11,6 +11,8 @@
 @interface ACAboutViewController ()
 - (IBAction)closePressed:(id)sender;
 - (IBAction)gotoWebsite:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextView *aboutDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *aboutTitleLabel;
 
 @end
 
@@ -44,6 +46,24 @@
 - (void)viewDidUnload
 {
     self.delegate = nil;
+    [self setAboutDescriptionLabel:nil];
+    [self setAboutTitleLabel:nil];
     [super viewDidUnload];
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+                                duration:(NSTimeInterval)duration
+{
+    if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
+        [UIView animateWithDuration:duration animations:^{
+            self.aboutDescriptionLabel.alpha = 0;
+            self.aboutTitleLabel.alpha = 0;
+        }];
+    } else {
+        [UIView animateWithDuration:duration animations:^{
+            self.aboutDescriptionLabel.alpha = 1.0;
+            self.aboutTitleLabel.alpha = 1.0;
+        }];
+    }
 }
 @end
