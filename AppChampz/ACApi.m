@@ -9,11 +9,27 @@
 #import "ACApi.h"
 #import "AFNetworking.h"
 #import "ACAtomFeedParser.h"
+#import "ACApp.h"
 
 #define AC_API_BASE_URL_STRING @"http://www.infweb.net"
 #define AC_API_DEFAULT_PER_PAGE 10
 
+@interface ACApi ()
+- (void)startNetworkActivity;
+- (void)stopNetworkActivity;
+@end
+
 @implementation ACApi
+
+- (void)startNetworkActivity
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+}
+
+- (void)stopNetworkActivity
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+}
 
 +(ACApi *)api
 {
@@ -41,7 +57,12 @@
         
         operatingSystemString = [NSString stringWithFormat:@"iOS-%@", operatingSystemString];
         
+        NSMutableIndexSet *acceptableStatusCodes = [[NSMutableIndexSet alloc] initWithIndex:404];
+        [acceptableStatusCodes addIndex:304];
+        
         [self setDefaultHeader:@"X-Platform" value:operatingSystemString];
+        [AFXMLRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"application/atom+xml"]];
+        [AFXMLRequestOperation addAcceptableStatusCodes:acceptableStatusCodes];
     }
     return self;
 }
@@ -58,7 +79,7 @@
                  failure:(void (^)(NSError *))failureBlock;
 {
     NSString *path = [NSString stringWithFormat:@"/feed/atom/?paged=%d", page];
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    [self startNetworkActivity];
     [self
      getPath:path parameters:nil
      success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -72,7 +93,7 @@
                  failureBlock(parser.parserError);
              }
          }
-         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+         [self stopNetworkActivity];
      }
      failure:^(AFHTTPRequestOperation *operation, NSError *error) {
          if (operation.response.statusCode == 404 && successBlock) {
@@ -80,7 +101,46 @@
          } else if (failureBlock) {
              failureBlock(error);
          }
-         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+         [self stopNetworkActivity];
      }];
+}
+
+- (void)fetchLatestAppFromDate:(NSDate *)date success:(void (^)(NSHTTPURLResponse *, ACApp *))successBlock
+                       failure:(void (^)(NSHTTPURLResponse *, NSError *))failureBlock;
+{
+    NSURL *url = [self.baseURL URLByAppendingPathComponent:@"feed/atom"];
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"];
+    [df setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setValue:[df stringFromDate:date] forHTTPHeaderField:@"If-Modified-Since"];
+    
+    AFXMLRequestOperation *operation;
+    operation = [AFXMLRequestOperation
+                 XMLParserRequestOperationWithRequest:request
+                 success:^(NSURLRequest *request, NSHTTPURLResponse *response, NSXMLParser *XMLParser) {
+                     NSArray *entries = [self entriesWithParser:XMLParser];
+                     if (entries.count && successBlock) successBlock(response, entries[0]);
+                     else if (successBlock) successBlock(response, nil);
+                     [self stopNetworkActivity];
+                 }
+                 failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, NSXMLParser *XMLParser) {
+                     if (failureBlock) failureBlock(response, error);
+                     [self stopNetworkActivity];
+                 }];
+    
+    [self startNetworkActivity];
+    [operation start];
+}
+
+- (NSArray *)entriesWithParser:(NSXMLParser *)parser
+{
+    ACAtomFeedParser *parserDelegate = [[ACAtomFeedParser alloc] init];
+    parser.delegate = parserDelegate;
+    if ([parser parse]) {
+        return parserDelegate.entries;
+    }
+    return nil;
 }
 @end

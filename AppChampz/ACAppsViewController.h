@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class ACAppsViewController;
+@class ACApp;
+
+@protocol ACAppsViewControllerDelegate <NSObject>
+- (void)appsViewController:(ACAppsViewController *)viewController didSelectApp:(ACApp *)app;
+@end
+
 @interface ACAppsViewController : UITableViewController
 
+@property (nonatomic, weak) id<ACAppsViewControllerDelegate> delegate;
 @end

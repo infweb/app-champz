@@ -10,23 +10,20 @@
 
 @interface ACAboutViewController ()
 - (IBAction)closePressed:(id)sender;
+- (IBAction)gotoWebsite:(id)sender;
 
 @end
 
 @implementation ACAboutViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIImage *bg = [[UIImage imageNamed:@"navbar-bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(1, 1, 1, 1)];
+    [self.navigationController.navigationBar setBackgroundImage:bg forBarMetrics:UIBarMetricsDefault];
+    
+    id titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navbar-title.png"]];
+    self.navigationItem.titleView = titleView;
     self.trackedViewName = @"About Page";
 }
 
@@ -38,6 +35,10 @@
 
 - (IBAction)closePressed:(id)sender {
     [self.delegate aboutViewControllerDidClose:self];
+}
+
+- (IBAction)gotoWebsite:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.infweb.net"]];
 }
 
 - (void)viewDidUnload

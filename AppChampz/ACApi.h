@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "AFHTTPClient.h"
 
+@class ACApp;
+
 @interface ACApi : AFHTTPClient
 
 + (ACApi *)api;
@@ -20,4 +22,6 @@
                  success:(void (^)(NSArray *))successBlock
                  failure:(void (^)(NSError *))failureBlock;
 
+- (void)fetchLatestAppFromDate:(NSDate *)date success:(void (^)(NSHTTPURLResponse *, ACApp *))successBlock
+                       failure:(void (^)(NSHTTPURLResponse *, NSError *))failureBlock;
 @end

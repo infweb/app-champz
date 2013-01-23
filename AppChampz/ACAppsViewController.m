@@ -73,6 +73,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIImage *bg = [[UIImage imageNamed:@"navbar-bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(1, 1, 1, 1)];
+    [self.navigationController.navigationBar setBackgroundImage:bg forBarMetrics:UIBarMetricsDefault];
+    
+    
     self.appCollection = [NSMutableArray array];
 
     __block ACAppsViewController *this = self;
@@ -146,5 +150,13 @@
 - (void)aboutViewControllerDidClose:(ACAboutViewController *)aboutViewController
 {
     [self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ACApp *app = self.appCollection[indexPath.row];
+    [self.delegate appsViewController:self didSelectApp:app];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [cell setSelected:NO];
 }
 @end
