@@ -12,6 +12,7 @@
 #import "UIScrollView+SVPullToRefresh.h"
 #import "ACApp.h"
 #import "ACApi.h"
+#import "ACTemplate.h"
 
 @interface ACAppDetailViewController () <UIWebViewDelegate, ACAboutViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *appDescriptionWebView;
@@ -90,14 +91,24 @@
 {
     NSString *html = @"";
     if (self.appTitle && self.appDescription) {
-        html = [NSString stringWithFormat:
-                @"<!DOCTYPE html>"
-                "<html><head>"
-                "<meta charset=\"utf-8\">"
-                "</head>"
-                "<body><h1>%@</h1>%@</body></html>",
-                self.appTitle,
-                self.appDescription];
+        NSString *templatePath = [[NSBundle mainBundle] pathForResource:@"feed-template-detail" ofType:@"html"];
+        NSError *error = nil;
+        html = [NSString stringWithContentsOfFile:templatePath encoding:NSUTF8StringEncoding error:&error];
+        
+        if (error) {
+            html = @"<!DOCTYPE html>"
+                    "<html><head>"
+                    "<meta charset=\"utf-8\">"
+                    "</head>"
+                    "<body><h1>{{ title }}</h1>{{ content }}</body></html>";
+        }
+        
+        NSString *title = self.appTitle, *content = self.appDescription;
+        if (!title) title = @"";
+        if (!content) content = @"";
+        
+        NSDictionary *context = @{@"title": title, @"content": content};
+        html = [ACTemplate renderTemplate:html withContext:context];
     }
     [self.appDescriptionWebView loadHTMLString:html baseURL:nil];
 }

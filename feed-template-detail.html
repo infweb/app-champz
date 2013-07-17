@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                font-size: 9pt;
+                font-family: Helvetica, sans-serif;
+            }
+            
+            section.ios-wrapper {
+                width: 320px;
+            }
+            
+            section.ios-wrapper header h2 {
+                font-size: 1.2em;
+            }
+            
+            section.ios-wrapper article {
+                padding: 5px;
+            }
+            
+            section.ios-wrapper article img {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            .wp-caption {
+                word-wrap: break-word !important;
+                max-width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="ios-wrapper">
+            <header>
+                <h2>{{title}}</h2>
+            </header>
+            <article>
+                {{content}}
+            </article>
+        </section>
+    </body>
+</html>

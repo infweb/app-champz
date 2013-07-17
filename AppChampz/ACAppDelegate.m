@@ -23,10 +23,11 @@
     
     id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:kGoogleAnalyticsTrackingID];
     NSLog(@"Registered tracker %@", tracker);
-    
+/*
 #ifdef TESTING
     [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
 #endif
+*/
     [TestFlight takeOff:TEST_FLIGHT_TEAM_TOKEN];
     
     return YES;

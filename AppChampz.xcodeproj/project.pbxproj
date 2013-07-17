@@ -54,6 +54,10 @@
 		E28FE1D316B0932800A581D8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E28FE1A316B0242200A581D8 /* Default-568h@2x.png */; };
 		E28FE1D616B094AE00A581D8 /* dark-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E28FE1D416B094AE00A581D8 /* dark-bg.png */; };
 		E28FE1D716B094AE00A581D8 /* dark-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E28FE1D516B094AE00A581D8 /* dark-bg@2x.png */; };
+		E299216B1795980500C6D72E /* feed-template-detail.html in Resources */ = {isa = PBXBuildFile; fileRef = E299216A1795980500C6D72E /* feed-template-detail.html */; };
+		E299216E1795998100C6D72E /* ACTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = E299216D1795998100C6D72E /* ACTemplate.m */; };
+		E29921701795A3DA00C6D72E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E299216F1795A3DA00C6D72E /* libPods.a */; };
+		E29921711795B5D200C6D72E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E28FE1A416B0242200A581D8 /* Default.png */; };
 		E2D6042116B018E9005092F2 /* about-button.png in Resources */ = {isa = PBXBuildFile; fileRef = E2D6041916B018E9005092F2 /* about-button.png */; };
 		E2D6042216B018E9005092F2 /* about-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2D6041A16B018E9005092F2 /* about-button@2x.png */; };
 		E2D6042316B018E9005092F2 /* applist-button.png in Resources */ = {isa = PBXBuildFile; fileRef = E2D6041B16B018E9005092F2 /* applist-button.png */; };
@@ -137,6 +141,10 @@
 		E28FE1CF16B08C7700A581D8 /* navbar-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar-title@2x.png"; sourceTree = "<group>"; };
 		E28FE1D416B094AE00A581D8 /* dark-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark-bg.png"; sourceTree = "<group>"; };
 		E28FE1D516B094AE00A581D8 /* dark-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark-bg@2x.png"; sourceTree = "<group>"; };
+		E299216A1795980500C6D72E /* feed-template-detail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "feed-template-detail.html"; sourceTree = "<group>"; };
+		E299216C1795998100C6D72E /* ACTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACTemplate.h; sourceTree = "<group>"; };
+		E299216D1795998100C6D72E /* ACTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACTemplate.m; sourceTree = "<group>"; };
+		E299216F1795A3DA00C6D72E /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libPods.a; path = "Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		E2D6041916B018E9005092F2 /* about-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about-button.png"; sourceTree = "<group>"; };
 		E2D6041A16B018E9005092F2 /* about-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about-button@2x.png"; sourceTree = "<group>"; };
 		E2D6041B16B018E9005092F2 /* applist-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "applist-button.png"; sourceTree = "<group>"; };
@@ -170,6 +178,7 @@
 				E286F87716A58F6D004F7653 /* SenTestingKit.framework in Frameworks */,
 				E286F87816A58F6D004F7653 /* UIKit.framework in Frameworks */,
 				E286F87916A58F6D004F7653 /* Foundation.framework in Frameworks */,
+				E29921701795A3DA00C6D72E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +215,7 @@
 				E28FE1CF16B08C7700A581D8 /* navbar-title@2x.png */,
 				E28FE1C616B0816000A581D8 /* share-btn-bg.png */,
 				E28FE1C716B0816000A581D8 /* share-btn-bg@2x.png */,
+				E299216A1795980500C6D72E /* feed-template-detail.html */,
 			);
 			name = Resources;
 			path = ..;
@@ -235,13 +245,14 @@
 		E286F85116A58F6C004F7653 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E286F85616A58F6C004F7653 /* CoreGraphics.framework */,
+				E286F85416A58F6C004F7653 /* Foundation.framework */,
+				E299216F1795A3DA00C6D72E /* libPods.a */,
+				588D308C4FD3473CB1699E6A /* libPods.a */,
 				E2586CF416A607BE0026B7A9 /* MobileCoreServices.framework */,
+				E286F87616A58F6D004F7653 /* SenTestingKit.framework */,
 				E2586CF216A607B80026B7A9 /* SystemConfiguration.framework */,
 				E286F85216A58F6C004F7653 /* UIKit.framework */,
-				E286F85416A58F6C004F7653 /* Foundation.framework */,
-				E286F85616A58F6C004F7653 /* CoreGraphics.framework */,
-				E286F87616A58F6D004F7653 /* SenTestingKit.framework */,
-				588D308C4FD3473CB1699E6A /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -261,6 +272,8 @@
 				E2586CF716A60C2D0026B7A9 /* ACAtomFeedParser.m */,
 				E2586CF916A6C33A0026B7A9 /* ACApp.h */,
 				E2586CFA16A6C33A0026B7A9 /* ACApp.m */,
+				E299216C1795998100C6D72E /* ACTemplate.h */,
+				E299216D1795998100C6D72E /* ACTemplate.m */,
 			);
 			path = AppChampz;
 			sourceTree = "<group>";
@@ -424,6 +437,8 @@
 				E28FE1D316B0932800A581D8 /* Default-568h@2x.png in Resources */,
 				E28FE1D616B094AE00A581D8 /* dark-bg.png in Resources */,
 				E28FE1D716B094AE00A581D8 /* dark-bg@2x.png in Resources */,
+				E299216B1795980500C6D72E /* feed-template-detail.html in Resources */,
+				E29921711795B5D200C6D72E /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +497,7 @@
 				E2586CFE16A6CB530026B7A9 /* ACAppDetailViewController.m in Sources */,
 				E28FE19E16B0210000A581D8 /* DDMenuController.m in Sources */,
 				E28FE1A216B0224100A581D8 /* ACMainViewController.m in Sources */,
+				E299216E1795998100C6D72E /* ACTemplate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,11 +586,13 @@
 			baseConfigurationReference = 74021839F525429FBEC727B8 /* Pods.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = AppChampz/AppChampz.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppChampz/AppChampz-Prefix.pch";
 				INFOPLIST_FILE = "AppChampz/AppChampz-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;
@@ -651,11 +669,13 @@
 			baseConfigurationReference = 74021839F525429FBEC727B8 /* Pods.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = AppChampz/AppChampz.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppChampz/AppChampz-Prefix.pch";
 				INFOPLIST_FILE = "AppChampz/AppChampz-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -665,11 +685,13 @@
 			baseConfigurationReference = 74021839F525429FBEC727B8 /* Pods.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = AppChampz/AppChampz.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppChampz/AppChampz-Prefix.pch";
 				INFOPLIST_FILE = "AppChampz/AppChampz-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
